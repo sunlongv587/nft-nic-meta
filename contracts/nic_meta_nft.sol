@@ -70,7 +70,7 @@ contract NicMeta is ERC721Enumerable, Ownable {
             _exists(tokenId),
             "ERC721Metadata: URI query for nonexistent token"
         );
-
+        // 在opensea 打开时会调用，这时要么展示盲盒图片，要么就给用户进行铸造
         if (_revealed == false) {
             return notRevealedUri;
         }
